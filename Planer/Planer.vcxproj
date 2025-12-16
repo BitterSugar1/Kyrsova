@@ -120,16 +120,17 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="project.cpp" />
-    <ClCompile Include="Task.cpp" />
-    <ClCompile Include="WindowTask.cpp" />
+    <ClCompile Include="WindowTaskControl.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="project.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="Task.h" />
     <ClInclude Include="WindowTask.h">
       <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="WindowTaskControl.h">
+      <FileType>CppControl</FileType>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -138,6 +139,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="WindowTask.resx">
       <DependentUpon>WindowTask.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowTaskControl.resx">
+      <DependentUpon>WindowTaskControl.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -1,4 +1,4 @@
-#pragma once
+п»ї#pragma once
 
 namespace Planer {
 
@@ -10,7 +10,7 @@ namespace Planer {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Сводка для WindowTask
+	/// Г‘ГўГ®Г¤ГЄГ  Г¤Г«Гї WindowTask
 	/// </summary>
 	public ref class WindowTask : public System::Windows::Forms::Form
 	{
@@ -19,13 +19,13 @@ namespace Planer {
 		{
 			InitializeComponent();
 			//
-			//TODO: добавьте код конструктора
+			//TODO: Г¤Г®ГЎГ ГўГјГІГҐ ГЄГ®Г¤ ГЄГ®Г­Г±ГІГ°ГіГЄГІГ®Г°Г 
 			//
 		}
 
 	protected:
 		/// <summary>
-		/// Освободить все используемые ресурсы.
+
 		/// </summary>
 		~WindowTask()
 		{
@@ -42,14 +42,13 @@ namespace Planer {
 
 	private:
 		/// <summary>
-		/// Обязательная переменная конструктора.
+		/// ГЋГЎГїГ§Г ГІГҐГ«ГјГ­Г Гї ГЇГҐГ°ГҐГ¬ГҐГ­Г­Г Гї ГЄГ®Г­Г±ГІГ°ГіГЄГІГ®Г°Г .
 		/// </summary>
-		System::ComponentModel::Container ^components;
+		System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
-		/// Требуемый метод для поддержки конструктора — не изменяйте 
-		/// содержимое этого метода с помощью редактора кода.
+
 		/// </summary>
 		void InitializeComponent(void)
 		{
@@ -85,7 +84,7 @@ namespace Planer {
 			this->checkBox1->Name = L"checkBox1";
 			this->checkBox1->Size = System::Drawing::Size(154, 20);
 			this->checkBox1->TabIndex = 1;
-			this->checkBox1->Text = L"Задача выполнена";
+			this->checkBox1->Text = L"Р—Р°РґР°С‡Р° РІС‹РїРѕР»РЅРµРЅР°";
 			this->checkBox1->UseVisualStyleBackColor = true;
 			this->checkBox1->CheckedChanged += gcnew System::EventHandler(this, &WindowTask::checkBox1_CheckedChanged);
 			// 
@@ -100,7 +99,7 @@ namespace Planer {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(652, 465);
+			this->ClientSize = System::Drawing::Size(668, 443);
 			this->Controls->Add(this->flowLayoutPanel1);
 			this->Name = L"WindowTask";
 			this->Text = L"WindowTask";
@@ -115,5 +114,5 @@ namespace Planer {
 	}
 	private: System::Void WindowTask_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
-};
+	};
 }

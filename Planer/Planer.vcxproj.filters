@@ -21,10 +21,7 @@
     <ClCompile Include="main.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="WindowTask.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="Task.cpp">
+    <ClCompile Include="WindowTaskControl.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
@@ -35,7 +32,7 @@
     <ClInclude Include="WindowTask.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="Task.h">
+    <ClInclude Include="WindowTaskControl.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
