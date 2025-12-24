@@ -44,7 +44,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v145</PlatformToolset>
     <CLRSupport>true</CLRSupport>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -118,30 +118,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AddNoteForm.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="project.cpp" />
-    <ClCompile Include="WindowTaskControl.cpp" />
+    <ClCompile Include="Note.cpp" />
+    <ClCompile Include="NoteSerializer.cpp" />
+    <ClCompile Include="WeeklyPlannerForm.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="project.h">
+    <ClInclude Include="AddNoteForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="WindowTask.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
-    <ClInclude Include="WindowTaskControl.h">
+    <ClInclude Include="Note.h" />
+    <ClInclude Include="NoteControl.h">
       <FileType>CppControl</FileType>
     </ClInclude>
+    <ClInclude Include="NoteSerializer.h" />
+    <ClInclude Include="WeeklyPlannerForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="project.resx">
-      <DependentUpon>project.h</DependentUpon>
+    <EmbeddedResource Include="NoteControl.resx">
+      <DependentUpon>NoteControl.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WindowTask.resx">
-      <DependentUpon>WindowTask.h</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="WindowTaskControl.resx">
-      <DependentUpon>WindowTaskControl.h</DependentUpon>
+    <EmbeddedResource Include="WeeklyPlannerForm.resx">
+      <DependentUpon>WeeklyPlannerForm.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
