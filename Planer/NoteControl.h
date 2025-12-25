@@ -19,7 +19,7 @@ namespace Planer {
 	/// </summary>
 	public ref class NoteControl : public System::Windows::Forms::UserControl
 	{
-	public: 
+	public:
 		NoteControl(void)
 		{
 			InitializeComponent();
@@ -48,39 +48,39 @@ namespace Planer {
 		event NoteEditButtonClickEventHandler^ NoteEditButtonClick;
 
 		// Свойства
-		property String^ NoteTitle {
-			String^ get() { return titleLabel->Text; }
-			void set(String^ value) { 
-				titleLabel->Text = value; 
+		property String^ NoteTitle{
+			String ^ get() { return titleLabel->Text; }
+			void set(String ^ value) {
+				titleLabel->Text = value;
 				UpdateToolTip();
 			}
 		}
 
-		property bool IsCompleted {
-			bool get() { return _isCompleted; }
-			void set(bool value) {
-				_isCompleted = value;
-				// Обновляем внешний вид при изменении состояния
-				UpdateAppearance();
-			}
+			property bool IsCompleted{
+				bool get() { return _isCompleted; }
+				void set(bool value) {
+					_isCompleted = value;
+					// Обновляем внешний вид при изменении состояния
+					UpdateAppearance();
+				}
 		}
 
-		property String^ NoteDescription {
-			String^ get() { return _description; }
-			void set(String^ value) {
-				_description = value;
-				// Обновляем ToolTip
-				UpdateToolTip();
-			}
+			property String^ NoteDescription{
+				String ^ get() { return _description; }
+				void set(String ^ value) {
+					_description = value;
+					// Обновляем ToolTip
+					UpdateToolTip();
+				}
 		}
 
-		property DateTime NoteTime {
-			DateTime get() { return _noteTime; }
-			void set(DateTime value) {
-				_noteTime = value;
-				// Обновляем ToolTip
-				UpdateToolTip();
-			}
+			property DateTime NoteTime{
+				DateTime get() { return _noteTime; }
+				void set(DateTime value) {
+					_noteTime = value;
+					// Обновляем ToolTip
+					UpdateToolTip();
+				}
 		}
 
 	private:
@@ -178,7 +178,6 @@ namespace Planer {
 #pragma region Windows Form Designer generated code
 		void InitializeComponent(void)
 		{
-
 			this->titleLabel = (gcnew System::Windows::Forms::Label());
 			this->editButton = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
@@ -189,12 +188,12 @@ namespace Planer {
 			this->titleLabel->BackColor = System::Drawing::Color::LightYellow;
 			this->titleLabel->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->titleLabel->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->titleLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8, System::Drawing::FontStyle::Regular));
+			this->titleLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8));
 			this->titleLabel->Location = System::Drawing::Point(0, 0);
 			this->titleLabel->Margin = System::Windows::Forms::Padding(0);
 			this->titleLabel->Name = L"titleLabel";
-			this->titleLabel->Padding = System::Windows::Forms::Padding(5, 0, 25, 0); // Добавили отступ справа для кнопки
-			this->titleLabel->Size = System::Drawing::Size(200, 40);
+			this->titleLabel->Padding = System::Windows::Forms::Padding(10, 0, 10, 0); // Уменьшил правый padding
+			this->titleLabel->Size = System::Drawing::Size(2356, 1061);
 			this->titleLabel->TabIndex = 0;
 			this->titleLabel->Text = L"Название заметки";
 			this->titleLabel->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
@@ -202,35 +201,31 @@ namespace Planer {
 			// 
 			// editButton
 			// 
-			this->editButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right)
-				| System::Windows::Forms::AnchorStyles::Bottom));
-			this->editButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(224)),
+			this->editButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)),
+				static_cast<System::Int32>(static_cast<System::Byte>(224)),
 				static_cast<System::Int32>(static_cast<System::Byte>(224)));
+			this->editButton->Dock = System::Windows::Forms::DockStyle::Right; // Изменено с Anchor на Dock
 			this->editButton->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->editButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 6, System::Drawing::FontStyle::Regular));
-			this->editButton->Location = System::Drawing::Point(170, 0);
+			this->editButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8)); // Увеличил шрифт
 			this->editButton->Margin = System::Windows::Forms::Padding(0);
 			this->editButton->Name = L"editButton";
-			this->editButton->Size = System::Drawing::Size(30, 40);
+			this->editButton->Size = System::Drawing::Size(60, 1061); // Фиксированная ширина
 			this->editButton->TabIndex = 1;
 			this->editButton->Text = L"✏️";
-			this->editButton->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			this->editButton->UseVisualStyleBackColor = false;
 			this->editButton->Click += gcnew System::EventHandler(this, &NoteControl::OnEditButtonClick);
 			// 
 			// NoteControl
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(12, 25);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::Transparent;
 			this->Controls->Add(this->editButton);
 			this->Controls->Add(this->titleLabel);
 			this->Margin = System::Windows::Forms::Padding(0);
 			this->Name = L"NoteControl";
-			this->Size = System::Drawing::Size(200, 40);
-			this->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->Size = System::Drawing::Size(2416, 1061); // Увеличил ширину на 60 пикселей для кнопки
 			this->ResumeLayout(false);
-
 		}
 #pragma endregion
 	};
